@@ -18,20 +18,52 @@ document.addEventListener('DOMContentLoaded', function(){
   var form = document.getElementById('contactForm');
   if(form){
     var err = document.getElementById('formErr');
+    var success = document.getElementById('formSuccess');
+    var submitBtn = document.getElementById('formSubmit');
+
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var name = document.getElementById('fname').value.trim();
       var email = document.getElementById('femail').value.trim();
       var message = document.getElementById('fmsg').value.trim();
+      var org = document.getElementById('forg').value.trim();
+
       if(!name || !email || !message){
         err.textContent = 'Fill in your name, email, and a short message before sending.';
         return;
       }
       err.textContent = '';
-      var org = document.getElementById('forg').value.trim();
-      var subject = encodeURIComponent('Introduction from ' + name + (org ? ' (' + org + ')' : ''));
-      var body = encodeURIComponent(message + '\n\n— ' + name + (org ? ', ' + org : '') + '\n' + email);
-      window.location.href = 'mailto:hello@truwardadvisory.com?subject=' + subject + '&body=' + body;
+
+      var fsubject = document.getElementById('fsubject');
+      if(fsubject){
+        fsubject.value = 'New introduction from ' + name + (org ? ' (' + org + ')' : '');
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response){
+        if(response.ok){
+          form.reset();
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          response.json().then(function(data){
+            var msg = (data && data.errors && data.errors.length) ? data.errors.map(function(x){ return x.message; }).join(', ') : 'Something went wrong. Try again, or email us directly.';
+            err.textContent = msg;
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send introduction';
+          });
+        }
+      }).catch(function(){
+        err.textContent = 'Something went wrong. Try again, or email us directly.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send introduction';
+      });
     });
   }
 });

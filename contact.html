@@ -55,7 +55,7 @@
       <p class="contact-note">Prefer email? Write to us directly and we'll get back to you within two business days.</p>
       <a href="mailto:hello@truwardadvisory.com" class="contact-email">hello@truwardadvisory.com</a>
     </div>
-    <form id="contactForm" novalidate>
+    <form id="contactForm" action="https://formspree.io/f/maeyjryb" method="POST" novalidate>
       <div class="field-row">
         <div>
           <label for="fname">Name</label>
@@ -74,8 +74,10 @@
         <label for="fmsg">What are you working through right now?</label>
         <textarea id="fmsg" name="message"></textarea>
       </div>
+      <input type="hidden" name="_subject" id="fsubject" value="New introduction from truwardadvisory.com">
       <div class="form-err" id="formErr"></div>
-      <button type="submit" class="btn btn-primary">Send introduction</button>
+      <p id="formSuccess" style="display:none; font-family:var(--serif); font-size:15.5px; color:var(--ink-soft);">Thanks — your message is on its way. We'll follow up within two business days.</p>
+      <button type="submit" class="btn btn-primary" id="formSubmit">Send introduction</button>
     </form>
   </div>
 </section>
