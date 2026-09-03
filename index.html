@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truward — Business Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gradBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <linearGradient id="gradStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/>
+    </linearGradient>
+    <linearGradient id="gradArrow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <symbol id="truward-mark" viewBox="0 0 100 100">
+      <line x1="12" y1="18" x2="78" y2="18" stroke="url(#gradBar)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="45" y1="18" x2="45" y2="90" stroke="url(#gradStem)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="20" y1="96" x2="90" y2="22" stroke="var(--paper)" stroke-width="19" stroke-linecap="round"/>
+      <line x1="20" y1="96" x2="86" y2="26" stroke="url(#gradArrow)" stroke-width="9" stroke-linecap="round"/>
+      <polygon points="80,10 100,15 92,32" fill="url(#gradArrow)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <svg class="mark" width="30" height="30"><use href="#truward-mark"/></svg>
+        <span class="brand-word">TRUWARD</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="current">Home</a>
+        <a href="practices.html">Practices</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="practices.html">Practices</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>We help growing organizations build better businesses.</h1>
+    <p class="lede">Truward is a business advisory firm for leaders who are ready to professionalize how their organization operates, grows, serves customers, and hires people.</p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      <a href="practices.html" class="btn btn-ghost">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Three practices, one operating philosophy</h2>
+      <p>Most organizations invest heavily in how they look to customers, and barely at all in how they actually operate. We close that gap.</p>
+    </div>
+    <div class="teaser-grid">
+      <div class="teaser">
+        <span class="deg teal">000°</span>
+        <h3>Growth &amp; strategy</h3>
+        <p>Go-to-market planning, customer retention and expansion, new-market analysis, and business model work.</p>
+        <a href="practices.html#growth" class="link">Learn more</a>
+      </div>
+      <div class="teaser">
+        <span class="deg blue">120°</span>
+        <h3>Operations &amp; customer experience</h3>
+        <p>Process improvement, journey mapping, organizational effectiveness, and KPI frameworks leadership will use.</p>
+        <a href="practices.html#operations" class="link">Learn more</a>
+      </div>
+      <div class="teaser">
+        <span class="deg violet">240°</span>
+        <h3>People &amp; hiring</h3>
+        <p>Candidate-experience audits, hiring-process redesign, recruiting strategy, and hiring-manager training.</p>
+        <a href="practices.html#people" class="link">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-track">
+      <div class="strip-item">
+        <span class="wp-label">01 · CHART</span>
+        <h3>Map the current state</h3>
+        <p>Interviews, data, and direct observation of how work actually happens today.</p>
+      </div>
+      <div class="strip-item">
+        <span class="wp-label">02 · PLOT</span>
+        <h3>Design the target state</h3>
+        <p>A prioritized plan built around what your team can realistically execute.</p>
+      </div>
+      <div class="strip-item">
+        <span class="wp-label">03 · NAVIGATE</span>
+        <h3>Work the plan with you</h3>
+        <p>We stay alongside your team through implementation, adjusting as conditions change.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap cta-band-row">
+    <h2>Ready to talk through what your organization needs?</h2>
+    <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-left">
+      <svg class="mark" width="24" height="24"><use href="#truward-mark"/></svg>
+      <div>
+        <div class="foot-word">Truward</div>
+        <div class="foot-tag">Business advisory for growing organizations.</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="practices.html">Practices</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

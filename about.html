@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Truward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gradBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <linearGradient id="gradStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/>
+    </linearGradient>
+    <linearGradient id="gradArrow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <symbol id="truward-mark" viewBox="0 0 100 100">
+      <line x1="12" y1="18" x2="78" y2="18" stroke="url(#gradBar)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="45" y1="18" x2="45" y2="90" stroke="url(#gradStem)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="20" y1="96" x2="90" y2="22" stroke="var(--paper)" stroke-width="19" stroke-linecap="round"/>
+      <line x1="20" y1="96" x2="86" y2="26" stroke="url(#gradArrow)" stroke-width="9" stroke-linecap="round"/>
+      <polygon points="80,10 100,15 92,32" fill="url(#gradArrow)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <svg class="mark" width="30" height="30"><use href="#truward-mark"/></svg>
+        <span class="brand-word">TRUWARD</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="practices.html">Practices</a>
+        <a href="about.html" class="current">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="practices.html">Practices</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>About Truward</h1>
+    <p>Built on operational discipline, formal strategic training, and hands-on consulting experience.</p>
+  </div>
+</div>
+
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="about-frame">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="88" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="60" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <line x1="100" y1="6" x2="100" y2="194" stroke="var(--line)" stroke-width="1"/>
+        <line x1="6" y1="100" x2="194" y2="100" stroke="var(--line)" stroke-width="1"/>
+        <use href="#truward-mark" x="65" y="65" width="70" height="70"/>
+      </svg>
+      <div class="frame-caption">PORTRAIT — TO BE ADDED</div>
+    </div>
+    <div>
+      <p class="bio">[Founder Name] founded Truward after a career that moved between the military, federal advisory work, and growth-stage companies. A U.S. Army veteran and a graduate of Georgetown University's MBA program, [Founder Name] has spent more than a decade advising federal and commercial organizations on strategy, operations, and customer experience.</p>
+      <p class="bio">That combination — operational discipline learned in the field, formal strategic training, and hands-on consulting experience — is the foundation Truward is built on. The firm brings the same rigor companies apply to customer experience to how they operate, grow, and hire.</p>
+      <div class="field-record">
+        <div><span>Service</span><span>U.S. Army veteran</span></div>
+        <div><span>Education</span><span>MBA, Georgetown University</span></div>
+        <div><span>Experience</span><span>10+ years, federal &amp; commercial advisory</span></div>
+        <div><span>Background</span><span>Strategy, consulting, customer success, operations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="manifesto">
+  <div class="wrap">
+    <div class="accent-line"></div>
+    <blockquote>Most organizations invest heavily in how they look to customers, and barely at all in how they actually operate. We think that gap is where the real risk lives — and the real opportunity.</blockquote>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap cta-band-row">
+    <h2>Want to know if Truward is the right fit?</h2>
+    <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-left">
+      <svg class="mark" width="24" height="24"><use href="#truward-mark"/></svg>
+      <div>
+        <div class="foot-word">Truward</div>
+        <div class="foot-tag">Business advisory for growing organizations.</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="practices.html">Practices</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

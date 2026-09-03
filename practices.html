@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practices — Truward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gradBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <linearGradient id="gradStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/>
+    </linearGradient>
+    <linearGradient id="gradArrow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+    </linearGradient>
+    <symbol id="truward-mark" viewBox="0 0 100 100">
+      <line x1="12" y1="18" x2="78" y2="18" stroke="url(#gradBar)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="45" y1="18" x2="45" y2="90" stroke="url(#gradStem)" stroke-width="12" stroke-linecap="square"/>
+      <line x1="20" y1="96" x2="90" y2="22" stroke="var(--paper)" stroke-width="19" stroke-linecap="round"/>
+      <line x1="20" y1="96" x2="86" y2="26" stroke="url(#gradArrow)" stroke-width="9" stroke-linecap="round"/>
+      <polygon points="80,10 100,15 92,32" fill="url(#gradArrow)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <svg class="mark" width="30" height="30"><use href="#truward-mark"/></svg>
+        <span class="brand-word">TRUWARD</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="practices.html" class="current">Practices</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="practices.html">Practices</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>What we do</h1>
+    <p>Each engagement sits in one of three practices. They run independently or together, depending on what your organization needs most right now.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="practices-list">
+      <div class="practice" id="growth">
+        <div class="bearing-tag">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="var(--line)" stroke-width="1"/><line x1="20" y1="20" x2="20" y2="5" stroke="var(--teal)" stroke-width="2"/></svg>
+          <span class="deg teal">000°</span>
+        </div>
+        <div>
+          <h3>Growth &amp; strategy</h3>
+          <p>Go-to-market strategy, growth planning, customer retention and expansion, new-market analysis, and business model work — built around what your team can actually execute this year, not a five-year deck nobody opens again.</p>
+        </div>
+        <ul>
+          <li>Growth planning for the next stage, not just the next quarter</li>
+          <li>Go-to-market and expansion strategy for new markets or offerings</li>
+          <li>Customer retention and expansion programs</li>
+          <li>Business model and pricing review</li>
+        </ul>
+      </div>
+      <div class="practice" id="operations">
+        <div class="bearing-tag">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="var(--line)" stroke-width="1"/><line x1="20" y1="20" x2="32" y2="27" stroke="var(--blue)" stroke-width="2"/></svg>
+          <span class="deg blue">120°</span>
+        </div>
+        <div>
+          <h3>Operations &amp; customer experience</h3>
+          <p>Process improvement, customer journey mapping, organizational effectiveness, and KPI development — so leadership can see what's actually happening and act on it, not just report it.</p>
+        </div>
+        <ul>
+          <li>End-to-end process mapping and redesign</li>
+          <li>Customer journey audits and friction removal</li>
+          <li>KPI and reporting frameworks leadership will actually use</li>
+          <li>Organizational structure and effectiveness reviews</li>
+        </ul>
+      </div>
+      <div class="practice" id="people">
+        <div class="bearing-tag">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="var(--line)" stroke-width="1"/><line x1="20" y1="20" x2="8" y2="27" stroke="var(--violet)" stroke-width="2"/></svg>
+          <span class="deg violet">240°</span>
+        </div>
+        <div>
+          <h3>People &amp; hiring</h3>
+          <p>Candidate-experience audits, hiring-process redesign, recruiting strategy, and hiring-manager training. We treat the candidate journey with the same discipline most companies reserve for the customer journey.</p>
+        </div>
+        <ul>
+          <li>Candidate-experience audits, from sourcing through rejection</li>
+          <li>Hiring-process redesign: handoffs, interview stages, SLAs</li>
+          <li>Hiring-manager training and enablement</li>
+          <li>Aligning employee and customer experience</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-alt); padding-top:64px;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How an engagement runs</h2>
+      <p>Three stages, in order. Short enough to start quickly, structured enough to hold everyone — including us — accountable.</p>
+    </div>
+    <div class="approach-track">
+      <div class="waypoint">
+        <div class="node">01</div>
+        <span class="wp-label">CHART</span>
+        <h3>Map the current state</h3>
+        <p>We interview stakeholders, review the data you already have, and observe how work actually happens today — not how the org chart says it happens.</p>
+      </div>
+      <div class="waypoint">
+        <div class="node">02</div>
+        <span class="wp-label">PLOT</span>
+        <h3>Design the target state</h3>
+        <p>We build a prioritized, sequenced plan around what your team can realistically execute — not a wish list that stalls at the first budget conversation.</p>
+      </div>
+      <div class="waypoint">
+        <div class="node">03</div>
+        <span class="wp-label">NAVIGATE</span>
+        <h3>Work the plan with you</h3>
+        <p>We stay alongside your team through implementation, adjusting course as real conditions change, until the new way of working is the normal way of working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap cta-band-row">
+    <h2>Not sure which practice fits? Let's talk it through.</h2>
+    <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-left">
+      <svg class="mark" width="24" height="24"><use href="#truward-mark"/></svg>
+      <div>
+        <div class="foot-word">Truward</div>
+        <div class="foot-tag">Business advisory for growing organizations.</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
