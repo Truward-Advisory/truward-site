@@ -3,11 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Truward</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Thanks — Truward</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<!--
+  GOOGLE ADS CONVERSION TRACKING
+  This page only loads right after a real form submission, which makes it
+  the correct place for a conversion tag. When you set up Google Ads:
+  1. Create a conversion action in Google Ads (Tools > Conversions).
+  2. Google Ads will give you a snippet that looks like the commented-out
+     block below, with your own AW-XXXXXXXXX and conversion label.
+  3. Uncomment it and fill in your real IDs. Leave the rest of this page as is.
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+    gtag('event', 'conversion', {
+      'send_to': 'AW-XXXXXXXXX/your-conversion-label'
+    });
+  </script>
+-->
+
 </head>
 <body>
 
@@ -22,7 +45,7 @@
         <a href="/">Home</a>
         <a href="practices.html">Practices</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="current">Contact</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="nav-cta">
         <a href="contact.html" class="btn btn-primary">Start a conversation</a>
@@ -43,43 +66,17 @@
 
 <div class="page-head">
   <div class="wrap">
-    <h1>Start a conversation</h1>
-    <p>Tell us what you're working through right now. We'll follow up within two business days, and if it's not a fit, we'll say so — and point you somewhere better if we can.</p>
+    <h1>Thanks — your message is on its way.</h1>
+    <p>We'll follow up within two business days. In the meantime, take a look at what we do or a bit more about the firm.</p>
   </div>
 </div>
 
-<section>
-  <div class="wrap contact-grid">
-    <div>
-      <h2 style="font-size:22px; font-weight:600;">Reach us directly</h2>
-      <p class="contact-note">Prefer email? Write to us directly and we'll get back to you within two business days.</p>
-      <a href="mailto:hello@truwardadvisory.com" class="contact-email">hello@truwardadvisory.com</a>
-    </div>
-    <form id="contactForm" action="https://formspree.io/f/maeyjryb" method="POST" novalidate>
-      <div class="field-row">
-        <div>
-          <label for="fname">Name</label>
-          <input type="text" id="fname" name="name" autocomplete="name">
-        </div>
-        <div>
-          <label for="forg">Organization</label>
-          <input type="text" id="forg" name="organization" autocomplete="organization">
-        </div>
-      </div>
-      <div>
-        <label for="femail">Email</label>
-        <input type="email" id="femail" name="email" autocomplete="email">
-      </div>
-      <div>
-        <label for="fmsg">What are you working through right now?</label>
-        <textarea id="fmsg" name="message"></textarea>
-      </div>
-      <input type="hidden" name="_subject" id="fsubject" value="New introduction from truwardadvisory.com">
-      <div class="form-err" id="formErr"></div>
-      <button type="submit" class="btn btn-primary" id="formSubmit">Send introduction</button>
-    </form>
+<div class="cta-band">
+  <div class="wrap cta-band-row">
+    <h2>Curious what an engagement actually looks like?</h2>
+    <a href="practices.html" class="btn btn-primary">See our practices</a>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="wrap foot-grid">

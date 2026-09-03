@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function(){
   var form = document.getElementById('contactForm');
   if(form){
     var err = document.getElementById('formErr');
-    var success = document.getElementById('formSuccess');
     var submitBtn = document.getElementById('formSubmit');
 
     form.addEventListener('submit', function(e){
@@ -48,9 +47,7 @@ document.addEventListener('DOMContentLoaded', function(){
         headers: { 'Accept': 'application/json' }
       }).then(function(response){
         if(response.ok){
-          form.reset();
-          form.style.display = 'none';
-          success.style.display = 'block';
+          window.location.href = 'thank-you.html';
         } else {
           response.json().then(function(data){
             var msg = (data && data.errors && data.errors.length) ? data.errors.map(function(x){ return x.message; }).join(', ') : 'Something went wrong. Try again, or email us directly.';
