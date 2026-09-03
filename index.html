@@ -42,17 +42,30 @@
 </header>
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>We help growing organizations build better businesses.</h1>
-      <p class="lede">Truward is a business advisory firm for leaders who are ready to professionalize how their organization operates, grows, serves customers, and hires people.</p>
-      <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
-        <a href="practices.html" class="btn btn-ghost">See what we do</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="hero-photo.jpg" alt="">
+  <svg class="hero-mark" viewBox="0 0 100 100" aria-hidden="true">
+    <defs>
+      <linearGradient id="heroMarkBar" gradientUnits="userSpaceOnUse" x1="12" y1="18" x2="78" y2="18">
+        <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+      </linearGradient>
+      <linearGradient id="heroMarkStem" gradientUnits="userSpaceOnUse" x1="45" y1="18" x2="45" y2="90">
+        <stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/>
+      </linearGradient>
+      <linearGradient id="heroMarkArrow" gradientUnits="userSpaceOnUse" x1="20" y1="96" x2="90" y2="22">
+        <stop offset="0" stop-color="var(--teal)"/><stop offset="1" stop-color="var(--blue)"/>
+      </linearGradient>
+    </defs>
+    <line x1="12" y1="18" x2="78" y2="18" stroke="url(#heroMarkBar)" stroke-width="12" stroke-linecap="square"/>
+    <line x1="45" y1="18" x2="45" y2="90" stroke="url(#heroMarkStem)" stroke-width="12" stroke-linecap="square"/>
+    <line x1="20" y1="96" x2="90" y2="22" stroke="var(--paper)" stroke-width="19" stroke-linecap="round"/>
+    <line x1="20" y1="96" x2="86" y2="26" stroke="url(#heroMarkArrow)" stroke-width="9" stroke-linecap="round"/>
+    <polygon points="80,10 100,15 92,32" fill="url(#heroMarkArrow)"/>
+  </svg>
+  <div class="wrap">
+    <h1>We help growing organizations build better businesses.</h1>
+    <p class="lede">Truward is a business advisory firm for leaders who are ready to professionalize how their organization operates, grows, serves customers, and hires people.</p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      <a href="practices.html" class="btn btn-ghost">See what we do</a>
     </div>
   </div>
 </section>
