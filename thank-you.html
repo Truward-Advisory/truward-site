@@ -19,15 +19,25 @@
      block below, with your own AW-XXXXXXXXX and conversion label.
   3. Uncomment it and fill in your real IDs. Leave the rest of this page as is.
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  This version only fires if the visitor accepted cookies in the banner
+  (window.truwardConsentGranted(), defined in script.js), so it respects
+  their choice instead of tracking regardless of it.
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX');
-    gtag('event', 'conversion', {
-      'send_to': 'AW-XXXXXXXXX/your-conversion-label'
-    });
+    if (window.truwardConsentGranted && window.truwardConsentGranted()) {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX';
+      document.head.appendChild(gaScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXX');
+      gtag('event', 'conversion', {
+        'send_to': 'AW-XXXXXXXXX/your-conversion-label'
+      });
+    }
   </script>
 -->
 
@@ -79,7 +89,8 @@
 </div>
 
 <footer>
-  <div class="wrap foot-grid">
+  <div class="wrap">
+    <div class="foot-grid">
     <div class="foot-left">
       <img src="truward-logo.png" class="mark" width="24" height="24" alt="Truward">
       <div>
@@ -91,6 +102,11 @@
       <a href="/">Home</a>
       <a href="practices.html">Practices</a>
       <a href="about.html">About</a>
+    </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Truward. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>

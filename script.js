@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+  // ---------- cookie consent banner ----------
+  // Stores the visitor's choice in localStorage as 'truward_consent': 'granted' or 'denied'.
+  // Any future analytics/ads snippet should check window.truwardConsentGranted()
+  // before loading, so declining here actually blocks tracking rather than just
+  // hiding a banner cosmetically.
+  window.truwardConsentGranted = function(){
+    return localStorage.getItem('truward_consent') === 'granted';
+  };
+
+  var existingConsent = localStorage.getItem('truward_consent');
+  if(!existingConsent){
+    var banner = document.createElement('div');
+    banner.className = 'cookie-banner visible';
+    banner.innerHTML =
+      '<p>We use cookies for site analytics and, if you agree, advertising measurement (including Google Ads conversion tracking). See our <a href="privacy.html">Privacy Policy</a>.</p>' +
+      '<div class="cookie-banner-actions">' +
+      '<button type="button" class="btn btn-ghost" id="cookieDecline">Decline</button>' +
+      '<button type="button" class="btn btn-primary" id="cookieAccept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('truward_consent', 'granted');
+      banner.remove();
+    });
+    document.getElementById('cookieDecline').addEventListener('click', function(){
+      localStorage.setItem('truward_consent', 'denied');
+      banner.remove();
+    });
+  }
+
   var toggle = document.getElementById('menuToggle');
   var panel = document.getElementById('mobilePanel');
   if(toggle && panel){

@@ -77,8 +77,8 @@ nav{
 .hero{padding:84px 0 72px; position:relative; overflow:hidden;}
 .hero .wrap{position:relative; z-index:1;}
 .hero-mark{
-  position:absolute; top:65%; right:92px; transform:translateY(-50%);
-  width:660px; height:auto; opacity:0.20; z-index:0; pointer-events:none;
+  position:absolute; top:68%; right:100px; transform:translateY(-50%);
+  width:680px; height:auto; opacity:0.20; z-index:0; pointer-events:none;
 }
 @media(max-width:900px){ .hero-mark{display:none;} }
 .hero h1{
@@ -206,3 +206,29 @@ footer{border-top:1px solid var(--line); padding:40px 0;}
 .foot-tag{font-size:13px; color:var(--ink-soft); font-family:var(--serif);}
 .foot-links{display:flex; gap:24px; font-size:14px; color:var(--ink-soft);}
 .foot-links a:hover{color:var(--ink);}
+.foot-bottom{
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+  margin-top:24px; padding-top:20px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:12.5px; color:var(--ink-soft);
+}
+.foot-bottom a{color:var(--ink-soft);}
+.foot-bottom a:hover{color:var(--ink);}
+
+/* ---------- cookie consent banner ---------- */
+.cookie-banner{
+  position:fixed; left:0; right:0; bottom:0; z-index:100;
+  background:var(--ink); color:var(--paper);
+  padding:18px 24px; display:none;
+  align-items:center; justify-content:center; gap:24px; flex-wrap:wrap;
+}
+.cookie-banner.visible{display:flex;}
+.cookie-banner p{
+  font-family:var(--serif); font-size:14px; color:#C9CDD3; max-width:640px; margin:0;
+}
+.cookie-banner a{color:var(--paper); text-decoration:underline;}
+.cookie-banner-actions{display:flex; gap:10px; flex-shrink:0;}
+.cookie-banner .btn{padding:9px 18px; font-size:13.5px;}
+.cookie-banner .btn-primary{background:var(--paper); color:var(--ink); border-color:var(--paper);}
+.cookie-banner .btn-primary:hover{background:var(--teal); border-color:var(--teal); color:var(--paper);}
+.cookie-banner .btn-ghost{background:transparent; color:var(--paper); border-color:#4A5460;}
+.cookie-banner .btn-ghost:hover{border-color:var(--paper);}
